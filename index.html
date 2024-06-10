@@ -28,16 +28,18 @@
 
         <!-- radio inputs -->
         <div class="query-type-container">
-            <p>Query Type</p>
-
-            <div class="general-enquiry">
-                <input type="radio" id="general" name="query-type" value="genreal-enquiry">
-                <label for="general"> General Enquiry</label>
-            </div>
-            
-            <div class="support-request">
-                <input type="radio" id="support" name="query-type" value="support-enquiry">
-                <label for="support"> Support Request</label>
+            <p>Query Type *</p>
+            <div class="query">
+                <div class="general-enquiry">
+                    <input type="radio" id="general" name="query-type" value="genreal-enquiry">
+                    <label for="general"> General Enquiry</label>
+                </div>
+                
+                <div class="support-request">
+                    <input type="radio" id="support" name="query-type" value="support-enquiry">
+                    <label for="support"> Support Request</label>
+                </div>
+               
             </div>
            
         </div>
@@ -46,9 +48,11 @@
         <textarea name="message" id="message" required></textarea>
 
         <!-- checkbox input -->
-
-        <input type="checkbox" name="consent" id="consent" value="consent" required>
-        <label for="consent">I consent to being contacted by the team *</label>
+        <div class="checkbox-container">
+            <input type="checkbox" name="consent" id="consent" value="consent" required>
+            <label for="consent">I consent to being contacted by the team *</label>
+        </div>
+       
 
         <!-- submit button -->
         <input type="submit" value="Submit">

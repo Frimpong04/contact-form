@@ -122,3 +122,28 @@ input[type="submit"] {
     outline: none;
     color: var(--light-green);
 }
+/* error styles */
+.error-message {
+    color: var(--red);
+}
+
+
+@media  screen and (max-width: 510px) {
+    body {
+        min-height: 100vh;
+    }
+
+    form {
+        width: 90%;
+        margin: 30% 0;
+    }
+
+    .name-container {
+        flex-wrap: wrap;
+    }
+
+    .first-name-container,
+    .last-name-container {
+        width: 100%;
+    }
+}

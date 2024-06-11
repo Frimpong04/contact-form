@@ -47,15 +47,21 @@
             <p class="error-message">This field is reuired</p>
         </div>
 
-        <label for="message"> Message *</label>
-        <textarea name="message" id="message" required></textarea>
-        <p class="error-message">This field is reuired</p>
-        <!-- checkbox input -->
-        <div class="checkbox-container">
-            <input type="checkbox" name="consent" id="consent" value="consent" required>
-            <label for="consent">I consent to being contacted by the team *</label>
+        <div class="message-container">
+            <label for="message"> Message *</label>
+            <textarea name="message" id="message" required></textarea>
+            <p class="error-message">This field is reuired</p>
         </div>
-        <p class="error-message">This field is reuired</p>
+        
+        <!-- checkbox input -->
+        <div class="check">
+            <div class="checkbox-container">
+                <input type="checkbox" name="consent" id="consent" value="consent" required>
+                <label for="consent">I consent to being contacted by the team *</label>
+            </div>
+            <p class="error-message">This field is reuired</p>
+        </div>
+       
 
         <!-- submit button -->
         <input type="submit" value="Submit">

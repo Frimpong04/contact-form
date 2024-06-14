@@ -1,27 +1,26 @@
 
 
-// button
-// const submitButton = document.getElementById("submit");
-const formInputs = document.getElementById("form").value;
+// form element
+const form = document.querySelector("#form");
 
 // input elements
 // name input elements and value
- const firstNameInput = document.getElementById("fName").value;
+ const firstNameInput = document.getElementById("fName");
 
- const lastNameInput = document.getElementById("lName").value;
+ const lastNameInput = document.getElementById("lName");
 
 //  email selector
- const emailInput = document.getElementById("email").value;
+ const emailInput = document.getElementById("email");
 
 //  textarea input and value
- const textareaInput = document.getElementById("message").value;
+ const textareaInput = document.getElementById("message");
 
 //  radio elements
-const supportRadioInput = document.getElementById("support").value;
-const generalRadioInput = document.getElementById("general").value;
+const supportRadioInput = document.getElementById("support");
+const generalRadioInput = document.getElementById("general");
 
 // checked button
-const checkButtonInput = document.getElementById("consent").checked;
+const checkButtonInput = document.getElementById("consent");
 
 // error elements
 const firstNameError = document.getElementById("fName-error");
@@ -34,7 +33,11 @@ const queryError = document.getElementById("query-error");
 // button element
 const submitButton = document.getElementById("submit");
 
+// form element
+const formElement = document.getElementById("form");
+
 // add event listeners
-const validateForm = () => {
-    console.log("first")
-}
+formElement.addEventListener("onsubmit", (e) => {
+    e.preventDefault();
+    console.log("first");
+})

@@ -84,6 +84,11 @@ input:focus,
 textarea:focus {
     outline: 1px solid var(--green-medium);
 }
+
+input:hover {
+    cursor: pointer;
+}
+
 /* query tye styles */
 .query-type-container {
     margin: 2rem 0;
@@ -108,6 +113,19 @@ textarea:focus {
     align-items: center;
     gap: 1rem;
 }
+
+.general-enquiry.error-active,
+.support-request.error-active {
+    border: 1px solid var(--red);
+}
+
+/* selected radio button div styles */
+.general-enquiry.selected,
+.support-request.selected {
+    background-color: var(--green-medium);
+    color: var(--white);
+}
+
 
 .message-container {
     display: flex;
@@ -147,7 +165,9 @@ input[type="checkbox"]:checked {
 
 input[type="checkbox"]:not(:disabled):checked {
     border-color: var(--green-medium);
-    background-image: url("/assets/images/checkmark-svgrepo-com.svg");
+    background-color: var(--green-medium);
+    /* background-image: url("/assets/images/checkmark-svgrepo-com.svg"); */
+    background-image: url("/assets/images/check_24dp_FILL0_wght400_GRAD0_opsz24.svg");
     
 }
 
@@ -168,13 +188,13 @@ input[type="radio"] {
 }
 
 input[type="radio"]:not(:disabled):checked {
-    border-color: var(--green-medium);
-    background-color: var(--green-medium);
+    border-color: var(--white);
+    background-color: var(--white);
     background-clip: content-box;
     background-image: radial-gradient(circular,
-        var(--green-medium)) 0%
-        var(--green-medium 50%
-        transparent 60%
+        var(--white) 0%,
+        var(--white) 50%,
+        transparent 60%,
         transparent 100%);
 }
 
@@ -195,6 +215,11 @@ input[type="submit"]:hover {
 .error-message {
     color: var(--red);
     margin-top: 0.5rem;
+}
+
+input.error-active,
+textarea.error-active { 
+    border: 1px solid var(--red);
 }
 
 

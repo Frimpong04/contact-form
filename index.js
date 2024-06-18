@@ -10,6 +10,7 @@ const form = document.querySelector("#form");
  firstNameInput.addEventListener("focus", () => {
     firstNameInput.value = "";
     firstNameError.textContent = "";
+    firstNameInput.classList.remove("error-active");
  })
  
  const lastNameInput = document.getElementById("lName");
@@ -17,6 +18,7 @@ const form = document.querySelector("#form");
  lastNameInput.addEventListener("focus", () => {
     lastNameInput.value = "";
     lastNameError.textContent = "";
+    lastNameInput.classList.remove("error-active");
  })
 
 //  email selector
@@ -24,22 +26,36 @@ const form = document.querySelector("#form");
  emailInput.addEventListener("focus", () => {
     emailInput.value = ""
     emailError.textContent= "";
+    emailInput.classList.remove("error-active");
  })
+
 //  textarea input and value
  const textareaInput = document.getElementById("message");
  textareaInput.addEventListener("focus", () => {
     messageError.textContent = "";
+    textareaInput.classList.remove("error-active");
  })
 
 //  radio elements
+const supportEnquiry = document.querySelector(".support-request");
+const generalEnquiry = document.querySelector(".general-enquiry");
+
 const supportRadioInput = document.getElementById("support");
 supportRadioInput.addEventListener("click", () => {
-    queryError.textContent = ""
+    queryError.textContent = "";
+    supportEnquiry.classList.add("selected");
+    generalEnquiry.classList.remove("selected");
+    supportEnquiry.classList.remove("error-active");
+    generalEnquiry.classList.remove("error-active");
 });
 
 const generalRadioInput = document.getElementById("general");
 generalRadioInput.addEventListener("click", () => {
     queryError.textContent = "";
+    generalEnquiry.classList.add("selected");
+    supportEnquiry.classList.remove("selected");
+    supportEnquiry.classList.remove("error-active");
+    generalEnquiry.classList.remove("error-active");
 });
 
 // checked button
@@ -68,30 +84,39 @@ form.addEventListener("submit", (event) => {
 
     if(!firstNameInput.value) {
         firstNameError.textContent = "I am expecting a first name please";
+        firstNameInput.classList.add("error-active");
     }
 
     if(!lastNameInput.value) {
         lastNameError.textContent ="I am expecting your last name please";
+        lastNameInput.classList.add("error-active");
     }
 
     if(!emailInput.value) {
         emailError.textContent ="You forget to tnter your email please";
+        emailInput.classList.add("error-active");
     }
 
     if(!emailInput.value.includes("@")) {
         emailError.textContent = "Enter an email please";
+        emailInput.classList.add('error-active');
     }
 
     if(!supportRadioInput.value || !generalRadioInput.value) {
         queryError.textContent = "tell us about your enquiry" ;
+        
     }
 
+    // no radio button clicked
     if(!supportRadioInput.checked && !generalRadioInput.checked) {
-        queryError.textContent = "Whta type of enquiry do want to make";
+        queryError.textContent = "What type of enquiry do want to make";
+        supportEnquiry.classList.add("error-active");
+        generalEnquiry.classList.add("error-active");
     }
 
     if(textareaInput.value === "") {
         messageError.textContent = "What is your enquiry please?";
+        textareaInput.classList.add("error-active");
     }
 
     if(checkButton.checked === false) {

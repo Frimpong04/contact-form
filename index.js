@@ -14,7 +14,6 @@ const form = document.querySelector("#form");
  })
  
  const lastNameInput = document.getElementById("lName");
-
  lastNameInput.addEventListener("focus", () => {
     lastNameInput.value = "";
     lastNameError.textContent = "";
@@ -147,4 +146,5 @@ form.addEventListener("submit", (event) => {
     supportEnquiry.checked = false;
     supportEnquiry.classList.remove("selected");
     generalEnquiry.classList.remove("selected");
-})
+
+});

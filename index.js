@@ -75,9 +75,16 @@ const queryError = document.getElementById("query-error");
 // button element
 const submitButton = document.getElementById("submit");
 
+// submit div
+// const successMessage = document.querySelector(".submiited-successfully");
+const popUpMessage = document.getElementById("popup");
+
+const valid = Boolean(firstNameInput.value) && Boolean(lastNameInput.value) && Boolean(emailInput.value)
+                && Boolean(textareaInput.value) && Boolean(checkButton.checked);
+
+const validRadioInput = Boolean(supportEnquiry.checked) || Boolean(supportEnquiry.checked);
+
 // event Listenres
-
-
 form.addEventListener("submit", (event) => {
    event.preventDefault();
     console.log("submit me");
@@ -123,4 +130,21 @@ form.addEventListener("submit", (event) => {
         consentError.textContent = "kindly give your consent please";
     }
 
+    // if(valid && validRadioInput) {
+    //     successMessage.style.display = "block";
+    // }
+
+    //  successMessage.style.display = "block";
+    popUpMessage.style.display = "block";
+    // console.log(successMessage);
+    console.log(popUpMessage);
+    firstNameInput.value = "";
+    lastNameInput.value="";
+    emailInput.value = "";
+    textareaInput.value="";
+    checkButton.checked = false;
+    generalRadioInput.checked = false;
+    supportEnquiry.checked = false;
+    supportEnquiry.classList.remove("selected");
+    generalEnquiry.classList.remove("selected");
 })

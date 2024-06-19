@@ -30,15 +30,18 @@ html {
 body {
     background-color: var(--light-green);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     height: 100vh;
+    /* border: 1px solid red; */
+    margin: 2rem 0rem;
 }
 
 /* form styles */
 form {
     width: 58rem;
-    margin: 20% 5%;
+    /* margin: 20% 5%; */
     padding: 2rem;
     border-radius: 2rem;
     background-color: var(--white);
@@ -222,6 +225,45 @@ textarea.error-active {
     border: 1px solid var(--red);
 }
 
+/* success message styles */
+.submitted-successfully {
+    background-color: var(--darker-grey-bold);
+    border-radius: 1rem;
+    /* position: absolute; */
+    /* top: 10%;
+    left: 50%; */
+    /* transform: translatex(-50%);  */
+    padding: 2rem;
+    font-family: medium;
+    display: none;
+}
+
+.submitted-successfully img {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+
+.success-message {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    /* justify-content: center; */
+    margin-bottom: 1rem;
+}
+
+.success-message h4 {
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+.submitted-successfully p {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
 
 @media  screen and (max-width: 510px) {
     body {

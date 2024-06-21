@@ -186,6 +186,12 @@ input[type="radio"] {
     background-color: transparent;
 }
 
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+input[type="submit"]:focus {
+    border: 1px solid var(--green-medium); 
+}
+
 .query label {
     margin-top: 0.4rem;
 }
@@ -208,7 +214,7 @@ button {
     border-radius: 0.5rem;
     border: none;
     outline: none;
-    color: var(--light-green);
+    color: var(--white);
 }
 
 input[type="submit"]:hover {
@@ -268,11 +274,12 @@ textarea.error-active {
 @media  screen and (max-width: 510px) {
     body {
         min-height: 100vh;
+        margin-top: 30%;
     }
 
     form {
         width: 90%;
-        margin-top: 30%;
+        /* margin-top: 30%; */
     }
 
     .name-container {

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="submitted-successfully" id="popup">
+    <div class="submitted-successfully" id="popup" role="pop up message">
         <div class="success-message">
             <img src="/assets/images/check_24dp_FILL0_wght400_GRAD0_opsz24.svg" alt="check image">
             <h4>Message Sent!</h4>
@@ -16,26 +16,26 @@
         <p>Thanks for completing the form. We'll be in touch soon!</p>
     </div>
     
-    <form action="" id="form" novalidate>
+    <form action="" id="form" novalidate role="contact form">
         <h3>Contact Us</h3>
         <div class="name-container">
             <div class="first-name-container">
                 <label for="fName">First Name <span aria-label="required">*</span></label>
                 <input type="text" id="fName"  name="first-name" />
-                <p class="error-message" id="fName-error"></p>
+                <p class="error-message" id="fName-error" role="alert"></p>
             </div>
            
             <div class="last-name-container">
                 <label for="lName" > Last Name <span aria-label="required">*</span></label>
                 <input type="text" id="lName" name="last-name" />
-                <p class="error-message" id="lName-error"></p>
+                <p class="error-message" id="lName-error" role="alert"></p>
             </div>
            
         </div>
 
         <label for="email">Email Address <span aria-label>*</span></label>
         <input type="email" id="email" name="email" />
-        <p class="error-message" id="email-error"></p>
+        <p class="error-message" id="email-error" role="alert"></p>
 
         <!-- radio inputs -->
         <div class="query-type-container">
@@ -52,13 +52,13 @@
                 </div>
                
             </div>
-            <p class="error-message" id="query-error"></p>
+            <p class="error-message" id="query-error" role="alert"></p>
         </div>
 
         <div class="message-container">
             <label for="message"> Message <span aria-label="required">*</span></label>
             <textarea name="message" id="message" ></textarea>
-            <p class="error-message" id="message-error"></p>
+            <p class="error-message" id="message-error" role="alert"></p>
         </div>
         
         <!-- checkbox input -->
@@ -67,7 +67,7 @@
                 <input type="checkbox" name="consent" id="consent">
                 <label for="consent">I consent to being contacted by the team <span aria-label="required"></span>*</label>
             </div>
-            <p class="error-message" id="consent-error"></p>
+            <p class="error-message" id="consent-error" role="alert"></p>
         </div>
        
 

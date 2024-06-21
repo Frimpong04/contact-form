@@ -1,10 +1,6 @@
-// window.alert("Connected to javascript");
-
 
 // form element
 const form = document.querySelector("#form");
-
-// input elements
 
 // select all input
 const formInputs = document.querySelectorAll("input");
@@ -82,10 +78,6 @@ const submitButton = document.getElementById("submit");
 // const successMessage = document.querySelector(".submiited-successfully");
 const popUpMessage = document.getElementById("popup");
 
-// const valid = Boolean(firstNameInput.value) && Boolean(lastNameInput.value) && Boolean(emailInput.value) && Boolean(textareaInput.value) && Boolean(checkButton.checked);
-
-// const validRadioInput = Boolean(supportEnquiry.checked) || Boolean(supportEnquiry.checked);
-
 // event Listenres
 form.addEventListener("submit", (event) => {
    event.preventDefault();
@@ -132,24 +124,6 @@ form.addEventListener("submit", (event) => {
         consentError.textContent = "kindly give your consent please";
     }
 
-    // function that returns true if all input are valid
-
-    // if(valid && validRadioInput) {
-    //     // successMessage.style.display = "block";
-    //     popUpMessage.style.display = "block";
-
-    //     console.log(popUpMessage, valid, validRadioInput);
-
-    //     firstNameInput.value = "";
-    //     lastNameInput.value="";
-    //     emailInput.value = "";
-    //     textareaInput.value="";
-    //     checkButton.checked = false;
-    //     generalRadioInput.checked = false;
-    //     supportEnquiry.checked = false;
-    //     supportEnquiry.classList.remove("selected");
-    //     generalEnquiry.classList.remove("selected");
-    // }
 
     //  successMessage.style.display = "block";
 
@@ -174,10 +148,6 @@ form.addEventListener("submit", (event) => {
         console.log("incompleted")
        }
       
-    }
-   
-    // console.log(successMessage);
-//    console.log(formInputs);
-    
+    } 
 
 });
